@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.1.14
+- http://www.phpmyadmin.net
+-
+- Host: 127.0.0.1
+- Generation Time: Dec 26, 2015 at 09:33 AM
+- Server version: 5.6.17
+- PHP Version: 5.5.12
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="http://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="exercicec2is" collation="latin1_swedish_ci" charset="latin1">
+            <pma:table name="author">
+                CREATE TABLE `author` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+                  `firstName` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+                  `image` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+                  `description` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+            </pma:table>
+            <pma:table name="book">
+                CREATE TABLE `book` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `author_id` int(11) DEFAULT NULL,
+                  `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+                  `description` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+                  `image` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+                  PRIMARY KEY (`id`),
+                  KEY `IDX_CBE5A331F675F31B` (`author_id`),
+                  CONSTRAINT `FK_CBE5A331F675F31B` FOREIGN KEY (`author_id`) REFERENCES `author` (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'exercicec2is'
+    -->
+    <database name="exercicec2is">
+        <!-- Table author -->
+        <table name="author">
+            <column name="id">1</column>
+            <column name="name">Moliere</column>
+            <column name="firstName"></column>
+            <column name="image">moliere.gif</column>
+            <column name="description">Jean-Baptiste Poquelin, dit Molière, né à Paris, baptisé le 15 janvier 1622</column>
+        </table>
+        <table name="author">
+            <column name="id">2</column>
+            <column name="name">Hemingway</column>
+            <column name="firstName">Ernest</column>
+            <column name="image">ernest-hemingway.gif</column>
+            <column name="description">Ernest Miller Hemingway est un écrivain et journaliste américain. Il est né le 21 juillet 1899 à Oak Park dans l'Illinois aux États-Unis et mort le 2 juillet 1961 à Ketchum (Idaho)</column>
+        </table>
+        <table name="author">
+            <column name="id">3</column>
+            <column name="name">Ollivier</column>
+            <column name="firstName">sebastien </column>
+            <column name="image">sebastien-ollivier.jpg</column>
+            <column name="description">Développeur Web TechLead Web Apps</column>
+        </table>
+        <!-- Table book -->
+        <table name="book">
+            <column name="id">1</column>
+            <column name="author_id">1</column>
+            <column name="title">Harpagon</column>
+            <column name="description">good book</column>
+            <column name="image">NULL</column>
+        </table>
+        <table name="book">
+            <column name="id">2</column>
+            <column name="author_id">2</column>
+            <column name="title">Paris est une fête</column>
+            <column name="description">Au cours de l’été 1957, Hemingway commença à travailler sur les &quot;Vignettes parisiennes&quot;, comme il appelait alors Paris est une fête. Il y travailla à Cuba et à Ketchum, et emporta même le manuscrit avec lui en Espagne pendant l’été 59, puis à Paris, à l’a</column>
+            <column name="image">paris-est-une-fete.jpg</column>
+        </table>
+        <table name="book">
+            <column name="id">3</column>
+            <column name="author_id">2</column>
+            <column name="title">Pour qui sonne le glas</column>
+            <column name="description">Pas d'adieu, guapa, parce que nous ne sommes pas séparés. J'espère que tout ira bien dans les Gredos. Va maintenant. Va pour de bon.</column>
+            <column name="image">pour-qui-sonne-le-glas.jpg</column>
+        </table>
+        <table name="book">
+            <column name="id">4</column>
+            <column name="author_id">3</column>
+            <column name="title">AngularJS</column>
+            <column name="description">Ce livre s'adresse aux développeurs Web qui souhaitent découvrir ou approfondir le développement de SPA</column>
+            <column name="image">angularjs.jpg</column>
+        </table>
+    </database>
+</pma_xml_export>
