@@ -1,3 +1,19 @@
+Exercice C2IS
+===================
+
+Installation
+-------------
+
+1. Mettre a jour les dépendance en utilisant `php composer.phar update`
+2. Importer l'échantillon de données dans une base de donnée depuis le fichier `baseDeDonnées.xml`
+3. Remplir les parametres de la base de données dans le fichier `bootstrap.php`
+
+
+
+
+Doctrine
+-------------
+
 | [Master][Master] | [2.4][2.4] | [2.3][2.3] | [2.2][2.2] | [2.1][2.1] |
 |:----------------:|:----------:|:----------:|:----------:|:----------:|
 | [![Build status][Master image]][Master] | [![Build status][2.4 image]][2.4] | [![Build status][2.3 image]][2.3] | [![Build status][2.2 image]][2.2] | [![Build status][2.1 image]][2.1] |
